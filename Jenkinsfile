@@ -1,13 +1,13 @@
 pipeline {
     
 	agent any
-/*	
 	tools {
         maven "maven3"
+    }		
+    environment {
+        SONARSERVER= 'sonarserver'
+        SONARSCANNER= 'sonarscanner'
     }
-*/	
-    
-	
     stages{
         
         stage('BUILD'){
@@ -48,7 +48,7 @@ pipeline {
         stage('CODE ANALYSIS with SONARQUBE') {
           
 		  environment {
-             scannerHome = tool 'sonarscanner4'
+             scannerHome = tool 'sonarscanner'
           }
 
           steps {
