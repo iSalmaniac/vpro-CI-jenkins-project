@@ -22,7 +22,8 @@ pipeline {
         AWS_EB_APP_VERSION = "${buildNumber}"
 
     }
-   
+
+    stages {   
         stage("Deploy to Stage Beanstalk"){
           steps {
             withAWS(credentials: 'awsbeancreds', region: 'ap-south-1') {
