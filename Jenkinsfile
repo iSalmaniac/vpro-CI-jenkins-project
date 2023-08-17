@@ -89,9 +89,9 @@ pipeline {
                     protocol: 'http',
                     nexusUrl: "${NEXUSIP}:${NEXUS_PORT}",
                     groupID: 'QA',
-                    verson: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
+                    version: "${env.BUILD_ID}-${env.BUILD_TIMESTAMP}",
                     repository: "${RELEASE_REPO}",
-                    credentialId: "${NEXUS_LOGIN}",
+                    credentialsId: "${NEXUS_LOGIN}",
                     artifacts: [
                         [artifactId: 'vproapp',
                          classifier: '',
