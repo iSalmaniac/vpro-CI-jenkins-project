@@ -17,7 +17,7 @@ pipeline {
         SONARSCANNER= 'sonarscanner'
         ARTIFACT_NAME = "vprofile-v${buildNumber}.war"
         AWS_S3_BUCKET = "vpro-cicd-beanstalk"
-        AWS_EB_APP_NAME = "vpro-app-cicd-beanstalk"
+        AWS_EB_APP_NAME = "vproapp"
         AWS_EB_ENVIRONMENT = "Vproapp-prod-environment-env" 
         AWS_EB_APP_VERSION = "${buildNumber}"
 
