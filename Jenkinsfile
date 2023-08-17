@@ -10,6 +10,7 @@ pipeline {
         jdk "OracleJDK8"
     }		
     environment {
+	SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin123'
         RELEASE_REPO = 'vprofile-release'
@@ -29,7 +30,7 @@ pipeline {
     stages {
         stage('Build'){
             steps {
-                sh 'mvn -s settings.xml -DskipTests install'
+                sh 'maven1 -s settings.xml -DskipTests install'
             }
             post {
                 success {
