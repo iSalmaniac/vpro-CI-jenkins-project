@@ -21,11 +21,7 @@ pipeline {
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER= 'sonarserver'
         SONARSCANNER= 'sonarscanner'
-        ARTIFACT_NAME = "vprofile-v${BUILD_ID}.war"
-        AWS_S3_BUCKET = "vpro-cicd-beanstalk"
-        AWS_EB_APP_NAME = "vpro-app-cicd-beanstalk"
-        AWS_EB_ENVIRONMENT = "Vpro-app-cicd-beanstalk-env" 
-        AWS_EB_APP_VERSION = "${BUILD_ID}"
+
     }
     stages {
         stage('Build'){
