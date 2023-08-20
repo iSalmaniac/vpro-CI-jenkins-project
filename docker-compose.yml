@@ -28,7 +28,7 @@ services:
     image: isalmaniac/vprofileapp
     container_name: vproapp
     ports:
-      - "8080:8080"
+      - "8081:8081"
     volumes:
       - vproappdata:/usr/local/tomcat/webapps
   vproweb:
