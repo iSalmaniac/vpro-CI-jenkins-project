@@ -31,15 +31,14 @@ services:
       - "8081:8081"
     volumes:
       - vproappdata:/usr/local/tomcat/webapps
-  vproweb:
+  vprofileweb:
     build:
       context: ./Docker-files/web
     image: isalmaniac/vprofileweb
-    container_name: vproweb
+    container_name: vprofileweb
     ports:
       - "80:80"
-    depends_on:
-      - vproapp
+    
 
 volumes:
    vprodbdata: {}
